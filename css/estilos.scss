@@ -3,6 +3,7 @@
   @import 'helpers/mixins.scss';
 
   @import 'base/normalize.scss';
+
   @import 'layout/geral.scss';
   @import 'layout/header.scss';
   @import 'layout/destaque';
@@ -11,4 +12,5 @@
   @import 'layout/blog';
   @import 'layout/contato';
   @import 'layout/footer';
+  @import  'media-queries';
 
