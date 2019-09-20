@@ -1,6 +1,23 @@
 //variaveis do sass
 $cor-padrao: #c24e4b;
+$cor-seccundaria:#1e2c35;
+$cor-branca: #fff;
 
+// criando mixin
+@mixin borda-arredondada($raio:0.3em){
+    -webkit-border-radius: $raio;
+    border-radius: $raio;
+}
+
+@mixin sombra-padrao{
+    box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+}
+
+@mixin image-replacement {
+    text-indent: -9999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
 
 
 
@@ -35,7 +52,7 @@ body {
   /** Header **/
   header {
     border-top: 5px solid $cor-padrao;
-    background: rgba(30, 44, 53, 0.8);
+    background: rgba($cor-seccundaria, 0.8);
     height: 90px;
     width: 100%;
     position: absolute;
@@ -44,31 +61,29 @@ body {
   header .container {
     position: relative;
   }
-  
-  .menu-opcoes {
+  //menu com aninhamento  bem legal no scss evita de escrever muita coisa 
+  .menu-principal {
     position: absolute;
     right: 0;
     top: -.5em;
     font-size: 1.2em;
     font-weight: lighter;
-  }
-  
-  .menu-opcoes ul {
-    padding-left: 0;
-  }
-  
-  .menu-opcoes li {
-    display: inline-block;
-    width: 5em;
-  }
-  
-  .menu-opcoes a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .menu-opcoes a:hover {
-    text-decoration: underline;
+    ul {
+        padding-left: 0;
+      }
+    li {
+        display: inline-block;
+        width: 5em;
+    }
+    a {
+        color: $cor-branca;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+          }
+      }
+
   }
   
   /** Destaque **/
@@ -76,7 +91,7 @@ body {
     background: url(../imagens/destaque.jpg) center bottom repeat-x;
     -webkit-background-size: cover;
     background-size: cover;
-    color: white;
+    color: $cor-branca;
     height: 330px;
     padding-top: 10em;
   }
@@ -102,9 +117,8 @@ body {
     border: 0;
     padding: .6em;
     font-size: 1.2em;
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
-    box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    @include borda-arredondada(50px);
+    @include sombra-padrao;
     font-weight: bold;
   }
   
@@ -141,9 +155,7 @@ body {
     display: inline-block;
     width: 50px;
     height: 60px;
-    text-indent: -9999px;
-    overflow: hidden;
-    background-repeat: no-repeat;
+    @include image-replacement;
     background-position: center;
     margin: 1em 1.5em 0 0;
   }
@@ -166,15 +178,15 @@ body {
   
   /** Planos **/
   .planos {
-    background: #1e2c35;
+    background:$cor-seccundaria;
   }
   
   .planos h2 {
-    color: #fff;
+    color: $cor-branca;
   }
   
   .plano {
-    background: white;
+    background: $cor-branca;
     width: 18em;
     display: inline-block;
     margin: 1em 0 0 1.4em;
@@ -186,7 +198,7 @@ body {
   }
   
   .plano h3 {
-    color: #fff;
+    color: $cor-branca;
     font-size: 1.8em;
     background: $cor-padrao;
     text-align: center;
@@ -203,34 +215,35 @@ body {
   
   .itens-plano {
     padding-left: 1.2em;
+
+    li {
+        font-size: 1em;
+        list-style: none;
+        border-bottom: 1px solid #acacac;
+        padding: .5em;
+        width: 14.8em;
+
+        &:last-child {
+            border: 0;
+          }
+      }
+      span {
+        float: right;
+      }
+
   }
   
-  .itens-plano li {
-    font-size: 1em;
-    list-style: none;
-    border-bottom: 1px solid #acacac;
-    padding: .5em;
-    width: 14.8em;
-  }
   
-  .itens-plano li:last-child {
-    border: 0;
-  }
-  
-  .itens-plano span {
-    float: right;
-  }
   
   .plano button {
     background: $cor-padrao;
     border: 0;
-    color: #fff;
+    color: $cor-branca;
     width: 210px;
     height: 38px;
     font-size: 1.2em;
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
-    box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    @include borda-arredondada;
+    @include sombra-padrao;
     margin-left: 2em;
   }
   
@@ -313,8 +326,7 @@ body {
     width: 100%;
     margin-bottom: .8em;
     padding: 4px 8px;
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
+    @include borda-arredondada;
     border: 2px solid #ccc;
   }
   
@@ -322,13 +334,12 @@ body {
     margin: 0 auto;
     background: $cor-padrao;
     border: 0;
-    color: #fff;
+    color: $cor-branca;
     width: 210px;
     height: 38px;
     font-size: 1.2em;
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
-    box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    @include borda-arredondada;
+    @include sombra-padrao;
   }
   
   /** Footer **/
@@ -351,7 +362,7 @@ body {
   
   footer::before {
     content: "";
-    background: #1e2c35;
+    background:$cor-seccundaria;
     top: 0;
     left: 0;
     bottom: 0;
@@ -396,7 +407,7 @@ body {
   }
   
   footer a {
-    color: #fff;
+    color: $cor-branca;
     text-decoration: none;
   }
   
@@ -408,9 +419,7 @@ body {
     display: block;
     width: 55px;
     height: 55px;
-    text-indent: -9999px;
-    overflow: hidden;
-    background-repeat: no-repeat;
+   @include image-replacement;
     margin-left: 1em;
   }
   
