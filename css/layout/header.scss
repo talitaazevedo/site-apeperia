@@ -5,8 +5,11 @@
    height: 90px;
    width: 100%;
    position: absolute;
+   .container {
+    position: relative;
+  }
 
-   @media (max-width: 980px) {
+   @media #{$mq-mobile} {
      
     height: auto;
     .container{
@@ -28,9 +31,6 @@
  
  }
 
- header .container {
-   position: relative;
- }
 
  //menu com aninhamento  bem legal no scss evita de escrever muita coisa 
  .menu-principal {
@@ -57,13 +57,16 @@
        text-decoration: underline;
      }
    }
-   @media (max-width: 980px) {
+   @media #{$mq-mobile} {
     position: static;
 		display: block;
     text-align: center;
+    width: auto;
     li {
       margin: .4em;
+      width: auto;
     }
+    
     
    }
 
