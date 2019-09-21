@@ -6,6 +6,9 @@
 .destaque button, .plano button, .contato button {
   box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3); }
 
+.contato, .contato input, .contato button {
+  display: block; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -579,18 +582,17 @@ header {
 .blog {
   display: block;
   position: relative; }
-
-.blog::after {
-  content: "";
-  background: url(../imagens/fundo.png);
-  background-size: 25px 25px;
-  opacity: .15;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1; }
+  .blog::after {
+    content: "";
+    background: url(../imagens/fundo.png);
+    background-size: 25px 25px;
+    opacity: .15;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; }
 
 .post-destaque,
 .posts-antigos {
@@ -604,9 +606,8 @@ header {
 
 .post-destaque {
   margin-right: 2em; }
-
-.post-destaque img {
-  width: 100%; }
+  .post-destaque img {
+    width: 100%; }
 
 .posts-antigos a {
   text-decoration: none;
@@ -615,31 +616,17 @@ header {
   padding-left: 2.5em;
   height: 1.7em;
   display: block; }
-
-.posts-antigos a:hover {
-  text-decoration: underline; }
+  .posts-antigos a:hover {
+    text-decoration: underline; }
 
 /** Contato **/
-.contato input,
-.contato button {
-  display: block; }
-
-form {
-  margin: 0 auto;
-  width: 50%; }
-  @media (max-width: 980px) {
-    form {
-      width: auto; } }
-
-.contato input,
-textarea {
+.contato input, .contato textarea {
   width: 100%;
   margin-bottom: .8em;
   padding: 4px 8px;
   -webkit-border-radius: 0.3em;
   border-radius: 0.3em;
   border: 2px solid #ccc; }
-
 .contato button {
   margin: 0 auto;
   background: #571f1d;
@@ -650,6 +637,13 @@ textarea {
   font-size: 1.2em;
   -webkit-border-radius: 0.3em;
   border-radius: 0.3em; }
+
+form {
+  margin: 0 auto;
+  width: 50%; }
+  @media (max-width: 980px) {
+    form {
+      width: auto; } }
 
 /** Footer **/
 footer {
