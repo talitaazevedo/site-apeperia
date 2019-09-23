@@ -65,9 +65,11 @@
 
   }
   
-  
+      //inclui um mixin de sprites que fiz
+      @include all-sprite-sprites;
   .icone-check, .icone-x {
-    background: url(../imagens/sprite.png) no-repeat;
+    //background: url(../imagens/sprite.png) no-repeat;
+
     width: 18px;
     height: 18px;
   }
