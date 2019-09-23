@@ -2,6 +2,7 @@
 footer {
     display: block;
     position: relative;
+    
     &::after {
       content: "";
       background: url(../imagens/fundo-rodape.png);
@@ -23,20 +24,17 @@ footer {
       position: absolute;
       z-index: -1;
     }
+    .container {
+      padding-top: 3em;
+      height: 6.5em;
+      position: relative;
+    }
   }
-  
-  
-  footer
-  
-  footer .container {
-    padding-top: 3em;
-    height: 6.5em;
-    position: relative;
-  }
-  
-  footer .container img {
+
+    
+  footer .container mg {
     width: 250px;
-  }
+  }i
   
   .menu-rodape,
   .social {

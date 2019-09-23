@@ -28,6 +28,7 @@
       font-size: 1.2em;
       @include borda-arredondada(50px);
       @extend %sombra-padrao;
+      
       font-weight: bold;
     } 
       
