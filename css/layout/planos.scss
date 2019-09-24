@@ -10,7 +10,7 @@
   
   .plano {
     background: $cor-branca;
-    width: 18em;
+    width:multiplica-fonte(18);
     display: inline-block;
     margin: 1em 0 0 1.4em;
     padding-bottom: 2em;
@@ -67,17 +67,18 @@
   
       //inclui um mixin de sprites que fiz
   @include all-sprite-sprites;
-  .sprite-icone-check, .sprite-icone-x {
+  .sprite-icone-ok, .sprite-icone-x {
     //background: url(../imagens/sprite.png) no-repeat;
     width: 18px;
     height: 18px;
   }
   
-  .sprite-icone-check {
-    background-position: 0 0;
-  }
+ 
   
   .sprite-icone-x {
     background-position: 0 -23px;
   }
   
+  .sprite-icone-ok {
+    background-position: 0 0;
+  }

@@ -8,6 +8,11 @@
   background-repeat: no-repeat;
 }
 
+.social-media-sprite, .social-media-facebook, .social-media-instagram48, .social-media-twitter {
+  background-image: url('../imagens/social-media-sa11763f474.png');
+  background-repeat: no-repeat;
+}
+
 .plataformas li, .social li a {
   text-indent: -9999px;
   overflow: hidden;
@@ -430,7 +435,7 @@ body {
   margin: 0 auto;
 }
 @media (max-width: 980px) {
-  .container .container {
+  .container {
     width: 90%;
   }
 }
@@ -557,6 +562,12 @@ header .container {
 .sobre {
   background: #ebebeb;
 }
+.sobre p {
+  font: .9em/1.8 sans-serif;
+}
+.sobre p:first-child {
+  margin-bottom: 3em;
+}
 
 .duas-colunas {
   -webkit-column-count: 2;
@@ -564,17 +575,8 @@ header .container {
   column-count: 2;
   columns: 1;
 }
-
 .duas-colunas h3 {
   margin: 0;
-}
-
-.sobre p {
-  font: .9em/1.8 sans-serif;
-}
-
-.sobre p:first-child {
-  margin-bottom: 3em;
 }
 
 .plataformas {
@@ -626,7 +628,7 @@ header .container {
 
 .plano {
   background: #fff;
-  width: 18em;
+  width: 288px;
   display: inline-block;
   margin: 1em 0 0 1.4em;
   padding-bottom: 2em;
@@ -685,17 +687,17 @@ header .container {
   background-position: 0 -23px;
 }
 
-.sprite-icone-check, .sprite-icone-x {
+.sprite-icone-ok, .sprite-icone-x {
   width: 18px;
   height: 18px;
 }
 
-.sprite-icone-check {
-  background-position: 0 0;
-}
-
 .sprite-icone-x {
   background-position: 0 -23px;
+}
+
+.sprite-icone-ok {
+  background-position: 0 0;
 }
 
 /** Blog **/
@@ -810,30 +812,26 @@ footer .container {
   height: 6.5em;
   position: relative;
 }
-
-footer .container mg {
+footer .container img {
   width: 250px;
 }
-
-i
-.menu-rodape,
-.social {
-  position: absolute;
-}
-
-.menu-rodape ul li {
-  display: inline-block;
-  margin-left: 2em;
+footer a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .menu-rodape {
   top: 1em;
   right: 0;
 }
+.menu-rodape ul li {
+  display: inline-block;
+  margin-left: 2em;
+}
 
+.menu-rodape,
 .social {
-  bottom: 0;
-  right: 0;
+  position: absolute;
 }
 
 .menu-rodape li,
@@ -841,35 +839,42 @@ i
   display: inline;
 }
 
-footer a {
-  color: #fff;
-  text-decoration: none;
+.social-media-facebook {
+  background-position: 0 0;
 }
 
+.social-media-instagram48 {
+  background-position: 0 -50px;
+}
+
+.social-media-twitter {
+  background-position: 0 -103px;
+}
+
+/*Icones sociais*/
+.social {
+  bottom: 0;
+  right: 0;
+}
 .social li {
   float: left;
 }
-
 .social li a {
   display: block;
   width: 55px;
   height: 55px;
   margin-left: 1em;
 }
-
+.social .social-media-instagram48 {
+  background-position: 0 -50px;
+}
+.social .social-media-facebook {
+  background-position: 0 5px;
+}
+.social .social-media-twitter {
+  background-position: 0 -103;
+}
 .social a {
   background-position: top;
   background-size: 50px 50px;
-}
-
-.social a[href*="facebook"] {
-  background-image: url(../imagens/facebook.png);
-}
-
-.social a[href*="twitter"] {
-  background-image: url(../imagens/twitter.png);
-}
-
-.social a[href*="instagram"] {
-  background-image: url(../imagens/instagram.png);
 }

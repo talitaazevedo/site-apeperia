@@ -5,8 +5,13 @@
   $sprite-spacing: 5px;
   //este import tras o sprite automatico do compass
   @import 'sprite/*.png';
+  ///////////////////////////////////
   $plataformas-spacing: 10px;
   @import 'plataformas/*.png';
+  /////////////////////////////////
+  $social-media-spacing:5px;
+  @import 'social-media/*.png';
+  /////////////////////////////////
 
 
   @import 'helpers/variaveis.scss';

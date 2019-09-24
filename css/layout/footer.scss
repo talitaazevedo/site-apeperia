@@ -2,7 +2,7 @@
 footer {
     display: block;
     position: relative;
-    
+   
     &::after {
       content: "";
       background: url(../imagens/fundo-rodape.png);
@@ -28,69 +28,81 @@ footer {
       padding-top: 3em;
       height: 6.5em;
       position: relative;
+      img {
+        width: 250px;
+      }
+    }
+    a {
+      color: $cor-branca;
+      text-decoration: none;
     }
   }
 
     
-  footer .container mg {
-    width: 250px;
-  }i
+  .menu-rodape{
+    top: 1em;
+    right: 0;
+    ul{
+      li {
+        display: inline-block;
+        margin-left: 2em;
+      }
+    }
+    
+  }
   
   .menu-rodape,
   .social {
     position: absolute;
   }
-  
-  .menu-rodape ul li {
-    display: inline-block;
-    margin-left: 2em;
-  }
-  
-  .menu-rodape {
-    top: 1em;
-    right: 0;
-  }
-  
-  .social {
-    bottom: 0;
-    right: 0;
-  }
+ 
   
   .menu-rodape li,
   .social li {
     display: inline;
   }
   
-  footer a {
-    color: $cor-branca;
-    text-decoration: none;
+ 
+  @include all-social-media-sprites;
+  /*Icones sociais*/
+  .social {
+    bottom: 0;
+    right: 0;
+    li {
+      float: left;
+      a {
+        display: block;
+        width: 55px;
+        height: 55px;
+        @extend %image-replacement;
+        margin-left: 1em;
+
+      }
+    
+
+    }
+    .social-media-instagram48{
+      background-position: 0 -50px;
+    
+    }
+      
+    .social-media-facebook{
+      background-position: 0 5px;
+      
+    }
+    .social-media-twitter{
+      background-position: 0 -103;
+      
+    }
+    a {
+      background-position: top;
+      background-size: 50px 50px;
+    
+    }
   }
+ 
+
   
-  .social li {
-    float: left;
-  }
+
   
-  .social li a {
-    display: block;
-    width: 55px;
-    height: 55px;
-   @extend %image-replacement;
-    margin-left: 1em;
-  }
-  
-  .social a {
-    background-position: top;
-    background-size: 50px 50px;
-  }
-  
-  .social a[href*="facebook"] {
-    background-image: url(../imagens/facebook.png);
-  }
-  
-  .social a[href*="twitter"] {
-    background-image: url(../imagens/twitter.png);
-  }
-  
-  .social a[href*="instagram"] {
-    background-image: url(../imagens/instagram.png);
-  }
+

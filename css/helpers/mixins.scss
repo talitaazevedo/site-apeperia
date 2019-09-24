@@ -28,4 +28,7 @@
     display: block;
 }
 
-//////////////////////////////
+////////////////////////////// isso é uma função 
+@function multiplica-fonte($multiplicador){
+    @return round($multiplicador * $tamanho-da-fonte-padrao);
+}
