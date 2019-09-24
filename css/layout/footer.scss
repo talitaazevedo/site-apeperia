@@ -25,8 +25,8 @@ footer {
       z-index: -1;
     }
     .container {
-      padding-top: 3em;
-      height: 6.5em;
+      padding-top: multiplica-fonte(3);//essa função multiplica EM e converte em px
+      height: multiplica-fonte(6.5);
       position: relative;
       img {
         width: 250px;
